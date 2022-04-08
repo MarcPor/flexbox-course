@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Project</title>
+
+    <script src="https://kit.fontawesome.com/bd2e8d2461.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    body{
+        font-family: 'Lato', sans-serif;
+        margin: 0px;
+    }
+
+    .navigation-wrapper{
+        background-color: slategray;
+         
+    }
+
+    .navigation-wrapper div{
+        display: none;
+    }
+
+    .navigation-wrapper .toggle,
+    .navigation-wrapper .nav-title{
+        display: inline-block;
+    }
+
+    .navigation-wrapper .link{
+        display: block;
+        text-align: center;
+        padding: 1em;
+        text-decoration: none;
+        background: #223047;
+        color: white;
+    }
+
+    .navigation-wrapper .link:hover,
+    .navigation-wrapper .link:active{
+        color:#223047;
+        background: white;
+    }
+
+    .navigation-wrapper .nav-title{
+        width: 10em;
+        text-align: center;
+        padding: 1em;
+        color: white;
+    }
+
+    .navigation-wrapper a{
+        text-decoration: none;
+    }
+
+    .navigation-wrapper .toggle{
+        padding: 1em;
+        color: black;
+    }
+
+    @media(min-width: 48em) {
+        .navigation-wrapper{
+            display: flex;
+        }
+
+        .navigation-wrapper div{
+            display: flex;
+        }
+
+        .navigation-wrapper .left,
+        .navigation-wrapper .right{
+            display: flex;
+            flex: 1;
+        }
+
+        .navigation-wrapper .link{
+            width: auto;
+        }
+
+        .navigation-wrapper .right{
+            justify-content: flex-end;
+        }
+
+        .navigation-wrapper .toggle{
+            display: none;
+        }
+    }
+
+    @media (max-width: 48em){
+        .navigation-wrapper.active .toggle{
+            background:#223047;
+            color: white;
+        }
+
+        .navigation-wrapper .nav-title{
+            text-align: left;
+        }
+
+        .navigation-wrapper .active div{
+            display: block;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="navigation-wrapper">
+        <a href="#" class="toggle" id="navHamburger">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <a href="#" class="nav-title">Navigation Page</a> 
+        
+        <div class="left">
+            <a href="#" class="link">Link 1</a>
+            <a href="#" class="link">Link 2</a>
+        </div>
+       
+        <div class="right">
+            <a href="#" class="link">Link 3</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    const navHamburger = document.querySelector('#navHamburger');
+
+    navHamburger.addEventListener('click', (e) => {
+        navHamburger.parentElement.classList.toggle('active');
+    })
+</script>
+</html>

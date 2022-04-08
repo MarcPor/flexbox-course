@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bd2e8d2461.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+    body{
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    .navigation-wrapper{
+        display:flex;
+        grid-template-columns: 150px 150px 150px 150px 150px;
+    }
+
+    .navigation-wrapper> .left-column img{
+        width: 50px;
+        height: 50px;
+        margin-right: 50px;
+        align-items: center;
+    }
+
+    .navigation-wrapper> .center-column{
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation-wrapper> .center-column a{
+        text-decoration: none;
+    }
+
+    .navigation-wrapper> .right-column{
+        display: flex;
+        align-items: center;
+        text-align: right;
+    }
+
+
+</style>
+
+<body>
+    
+    <div class="navigation-wrapper">
+        <div class="left-column">
+         <img src="blogo.png" alt="Logo">
+        </div>
+        
+        <div class="center-column">
+            <a href="#">Tickets</a>
+            <a href="#">New Ticket</a>
+            <a href="#">Chat</a>
+            <a href="#">Alerts</a>
+            
+
+            <div class="navigation-search-bar">
+                <input type="text">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+</body>
+</html>
