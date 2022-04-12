@@ -16,60 +16,173 @@
 
     body{
         font-family: 'Noto Sans', sans-serif;
+        margin: 0px;
     }
 
     .navigation-wrapper{
-        display:flex;
-        grid-template-columns: 150px 150px 150px 150px 150px;
+        box-shadow: 0 11px 30px rgba(0, 0, 0, 0.4)  ; 
+
+        padding: 21px;
     }
 
-    .navigation-wrapper> .left-column img{
-        width: 50px;
-        height: 50px;
-        margin-right: 50px;
-        align-items: center;
-    }
-
-    .navigation-wrapper> .center-column{
+    .navigation-wrapper> .nav-links-wrapper img{
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
-    .navigation-wrapper> .center-column a{
+    .navigation-wrapper> .nav-links-wrapper{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .navigation-wrapper> .nav-links-wrapper a{
         text-decoration: none;
+        color: #00c274;
+        transition: .5s ease-in-out;
     }
 
-    .navigation-wrapper> .right-column{
+    .navigation-wrapper> .nav-links-wrapper> .left-column{
+        padding: 10px;
+    }
+
+    .navigation-wrapper> .nav-links-wrapper> .center-column{
+        display: grid;
+        grid-template-columns: 120px 150px 125px 125px 165px;
+        align-items: center;
+        margin-left: 40px;
+        font-weight: 900;
+    }
+
+    .navigation-wrapper> .nav-links-wrapper> .center-column> .navigation-search-bar{
         display: flex;
         align-items: center;
-        text-align: right;
+        margin-left: 90px;
+        width: 500px;
+        color: white;
     }
 
+    .navigation-search-bar input{
+        width: 420px;
+        border: solid #00c274;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 40px;
+    }
+
+    .navigation-search-bar i{
+        color:white;
+        background-color: #00c274;
+        height: 48px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .navigation-wrapper> .nav-links-wrapper> .right-column{
+        display: flex;
+        margin-left: 500px;
+    }
+
+    .navigation-wrapper> .nav-links-wrapper> .right-column{
+        color: #00c274;
+         font-size: 28px;
+    }
+
+
+    .center-page{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 600px;
+    }
+
+    .center-page> .page-selectors{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .center-page> .page-selectors a{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+        color: #00c274;
+    }
+
+    .center-page> .text-box{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .center-page> .text-box input{
+        width: 400px;
+        height: 400px;
+    }
 
 </style>
 
 <body>
     
     <div class="navigation-wrapper">
-        <div class="left-column">
-         <img src="blogo.png" alt="Logo">
-        </div>
-        
-        <div class="center-column">
-            <a href="#">Tickets</a>
-            <a href="#">New Ticket</a>
-            <a href="#">Chat</a>
-            <a href="#">Alerts</a>
+        <div class="nav-links-wrapper">
+            <div class="left-column">
+                <img src="blogo.png" alt="Logo">
+            </div>
             
+            <div class="center-column">
+                <a href="#">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    Tickets
+                </a>
+                    
+                <a href="#">
+                    <i class="fa-solid fa-square-plus"></i>
+                    New Ticket
+                </a>
+                
+                <a href="#">
+                    <i class="fa-solid fa-comments"></i>
+                    Chat
+                </a>
+                
+                <a href="#">
+                    <i class="fa-solid fa-bell"></i>
+                    Alerts
+                </a>
+                
 
-            <div class="navigation-search-bar">
-                <input type="text">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="navigation-search-bar">
+                    <input type="text">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </a>
             </div>
         </div>
-        
-        <div class="right-column">
-            <i class="fa-solid fa-right-from-bracket"></i>
+    </div>
+
+    <div class="center-page">
+        <div class="page-selectors">
+            <a href="#">Queue</a>
+            <a href="#">Submitted</a>
+            <a href="#">Assigned</a>
+            <a href="#">Completed</a>
+        </div>
+
+        <div class="text-box">
+            <input type="text" name="Type Here" id="text-box">
         </div>
     </div>
 </body>
